@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vision Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,480;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <div class="header">
+    <div class="eyebrow"><span>Vision Board</span><span class="rule"></span><span id="stat">0 pinned</span></div>
+    <div class="title-row">
+      <div class="title-group">
+        <h1 class="board-title" id="boardTitle" contenteditable="true" spellcheck="false"></h1>
+        <div class="board-subtitle" id="boardSubtitle" contenteditable="true" spellcheck="false"></div>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-ghost" id="clearBtn">Clear board</button>
+        <button class="btn btn-primary" id="addBtnHeader">＋ Pin something</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="filters" id="filters"></div>
+
+  <div class="board" id="board"></div>
+</div>
+
+<div class="backdrop" id="backdrop" style="display:none;">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <h2 id="modalTitle">Pin something new</h2>
+    <div class="tabs">
+      <button class="tab" data-tab="photo" data-active="true">Photo</button>
+      <button class="tab" data-tab="goal">Goal</button>
+    </div>
+
+    <div id="panelPhoto">
+      <div class="field">
+        <label for="fileInput">Photo</label>
+        <label class="upload-btn" id="uploadLabel" for="fileInput">Choose a photo to pin</label>
+        <input type="file" id="fileInput" accept="image/*" class="visually-hidden">
+        <div class="preview-wrap" id="previewWrap" style="display:none;"><img id="previewImg" alt=""></div>
+      </div>
+      <div class="field">
+        <label for="photoCaption">Caption (optional)</label>
+        <input type="text" id="photoCaption" placeholder="e.g. Kyoto, someday">
+      </div>
+    </div>
+
+    <div id="panelGoal" style="display:none;">
+      <div class="field">
+        <label for="goalTitle">Goal</label>
+        <input type="text" id="goalTitle" placeholder="e.g. Run a half marathon">
+      </div>
+      <div class="field">
+        <label for="goalNote">Note (optional)</label>
+        <textarea id="goalNote" placeholder="Why it matters, or the first step"></textarea>
+      </div>
+      <div class="field">
+        <label for="goalCategory">Category</label>
+        <select id="goalCategory"></select>
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="cancelBtn">Cancel</button>
+      <button class="btn btn-primary" id="saveBtn">Pin it</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
