@@ -2,7 +2,7 @@
 
 A highly aesthetic, corkboard-style digital vision board built to showcase dynamic front-end interactions, fluid layout systems, and native browser optimizations. This tool allows users to map out goals, upload imagery, and seamlessly organize milestones across multiple lifestyle domains.
 
-🔗 **[Live Interactive Demo]https://maleehafaiz.github.io/Digital-Vision-Board/**
+🔗 **[Live Interactive Demo](https://maleehafaiz.github.io/Digital-Vision-Board/)**
 
 ---
 
